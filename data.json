@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "title": "India Gate",
+    "rating": 4.6,
+    "reviews": 281124,
+    "description": "India Gate is a war memorial located in New Delhi, along the Rajpath. It is dedicated to the 82,000 soldiers, both Indian and British.",
+    "image": "https://wallpapercave.com/wp/wp3326964.jpg",
+    "latitude": 28.6129,
+    "longitude": 77.2295
+  },
+  {
+    "id": 2,
+    "title": "Red Fort",
+    "rating": 4.5,
+    "reviews": 168729,
+    "description": "The Red Fort is a historical fort in the old Delhi area, on the banks of Yamuna.",
+    "image": "https://st2.depositphotos.com/1002280/6548/i/450/depositphotos_65487621-stock-photo-red-fort.jpg",
+    "files": "file",
+    "latitude": 28.6562,
+    "longitude": 77.2410
+  },
+  {
+    "id": 3,
+    "title": "Qutub Minar",
+    "rating": 4.5,
+    "reviews": 151556,
+    "description": "Qutub Minar is a minaret or a victory tower located in the Qutub complex, a UNESCO World Heritage Site in Delhi's Mehrauli area.",
+    "image": "https://th.bing.com/th/id/OIP.gf7SM2n5_pVs5iQtMDcnDQHaGt?rs=1&pid=ImgDetMain",
+    "latitude": 28.5245,
+    "longitude": 77.1855
+  },
+  {
+    "id": 4,
+    "title": "Lotus Temple",
+    "rating": 4.5,
+    "reviews": 67772,
+    "description": "Located in the national capital of New Delhi, the Lotus Temple is an edifice dedicated to the Baháʼí Faith.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Lotus_temple_Delhi.jpg",
+    "latitude": 28.5535,
+    "longitude": 77.2588
+  },
+  {
+    "id": 5,
+    "title": "Humayun's tomb",
+    "rating": 4.5,
+    "reviews": 67772,
+    "description": "Humayun's tomb is the final resting place of the Mughal Emperor Humayun.",
+    "image": "https://th.bing.com/th/id/R.72c15514a42869247f580d7fbe6e0e54?rik=7KLaqfSKDBQatw&riu=http%3a%2f%2fwww.thehistoryhub.com%2fwp-content%2fuploads%2f2014%2f04%2fHumayun-Tomb-Images.jpg&ehk=LlpYuBHZ9F%2fW0MBfu8L5oWy0iiAGUkItUb0xjYdSa%2fo%3d&risl=&pid=ImgRaw&r=0",
+    "latitude": 28.5933,
+    "longitude": 77.2507
+  }
+]
