@@ -1,12 +1,43 @@
-# React + Vite
+ Y2Z Travel – Itinerary Planner (Drag-and-Drop)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+🖱️ Drag-and-Drop Sorting: Smooth reordering of itinerary cards using native HTML5 drag events.
 
-Currently, two official plugins are available:
+🎞️ Animated Transitions: Visual feedback and animated transitions while sorting.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📱 Responsive Design: Works seamlessly on both desktop and mobile devices.
 
-## Expanding the ESLint configuration
+💾 Persistent State: Card order is saved in localStorage to persist after reload.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🗺️ Interactive Map View: Integrated Leaflet map highlighting itinerary locations with markers.
+
+🎥 Demo Video
+📹 Watch 1-Minute Demo
+
+In the video:
+
+Shows how drag-and-drop works smoothly.
+
+Explains the implementation logic.
+
+Highlights the map interaction and localStorage.
+
+⚙️ How It Works
+The activity cards are loaded from a local JSON file.
+
+Each card is made draggable using the native draggable attribute.
+
+On dragStart, the index of the card is stored.
+
+On dragOver, the dragged card is inserted before the hovered card.
+
+Transitions and cursor styles give feedback.
+
+Leaflet shows markers for major landmarks (e.g., India Gate, Red Fort, etc.).
+
+The reordered card list is saved in localStorage.
+
+📱 Responsive Behavior
+On mobile, the map view is hidden for a cleaner experience.
+
+Touch-friendly drag zones are included.
