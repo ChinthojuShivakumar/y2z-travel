@@ -20,9 +20,8 @@ const Card = ({
   onDragOver,
   onDragStart,
   onDrop,
-  isDragging
+  isDragging,
 }) => {
-    
   const [editMode, setEditMode] = useState(false);
   const [mobileView, setMobileView] = useState(window.innerWidth < 600);
   const [attachmentF, setAttachmentF] = useState(false);
@@ -33,7 +32,7 @@ const Card = ({
       onDragStart={onDragStart}
       onDragOver={onDragOver}
       onDrop={onDrop}
-      style={{ cursor: isDragging ? 'grab' : 'pointer' }}
+      style={{ cursor: isDragging ? "grab" : "pointer" }}
       className="max-sm:my-5 sm:max-lg:my-5"
     >
       <div className="flex w-full gap-2 p-2">
@@ -59,6 +58,12 @@ const Card = ({
               <p className="text-[#344767] p-1 cursor-default">
                 <SiGooglemaps size={20} />
               </p>
+
+              {mobileView && (
+                <p className="p-1">
+                  <BsThreeDotsVertical size={20} />
+                </p>
+              )}
               <p
                 className={`max-sm:hidden p-1 sm:max-lg:hidden ${
                   attachmentF && "bg-gray-200 cursor-pointer  rounded-md"
