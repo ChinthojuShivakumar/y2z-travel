@@ -13,6 +13,31 @@ const Home = () => {
   const [mobileView, setMobileView] = useState(window.innerWidth < 600);
   const navigate = useNavigate();
 
+  const [touchStartY, setTouchStartY] = useState(null);
+  const [touchDraggedIndex, setTouchDraggedIndex] = useState(null);
+
+  const handleTouchStart = (e, index) => {
+    setTouchStartY(e.touches[0].clientY);
+    setTouchDraggedIndex(index);
+  };
+
+  const handleTouchMove = (e) => {
+    e.preventDefault(); // prevent scrolling while dragging
+  };
+
+  const handleTouchEnd = (e, dropIndex) => {
+    if (touchDraggedIndex === null || dropIndex === null) return;
+
+    const updated = [...cardList];
+    const draggedItem = updated[touchDraggedIndex];
+    updated.splice(touchDraggedIndex, 1);
+    updated.splice(dropIndex, 0, draggedItem);
+
+    setCardList(updated);
+    setTouchStartY(null);
+    setTouchDraggedIndex(null);
+  };
+
   const handleDragStart = (i) => {
     setDraggedIndex(i);
   };
@@ -76,7 +101,10 @@ const Home = () => {
                 onDragOver={(e) => handleDragOver(e, i)}
                 onDragStart={() => handleDragStart(i)}
                 onDrop={handleDrop}
-                isDragging={draggedIndex === i}
+                isDragging={draggedIndex === i || touchDraggedIndex === i}
+                onTouchStart={(e) => handleTouchStart(e, i)}
+                onTouchMove={(e) => handleTouchMove(e)}
+                onTouchEnd={(e) => handleTouchEnd(e, i)}
               />
             );
           })}

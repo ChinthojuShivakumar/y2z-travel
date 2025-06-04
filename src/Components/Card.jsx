@@ -21,6 +21,9 @@ const Card = ({
   onDragStart,
   onDrop,
   isDragging,
+  onTouchEnd,
+  onTouchStart,
+  onTouchMove
 }) => {
   const [editMode, setEditMode] = useState(false);
   const [mobileView, setMobileView] = useState(window.innerWidth < 600);
@@ -34,6 +37,9 @@ const Card = ({
       onDrop={onDrop}
       style={{ cursor: isDragging ? "grab" : "pointer" }}
       className="max-sm:my-5 sm:max-lg:my-5"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
     >
       <div className="flex w-full gap-2 p-2">
         <div className="flex justify-center items-center cursor-pointer">
